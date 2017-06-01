@@ -1,0 +1,2 @@
+[01-Jun-2017 22:50:11 Asia/Jakarta] PHP Fatal error:  Call to a member function cek_login() on null in /home/himatik5/public_html/application/controllers/Login.php on line 23
+[01-Jun-2017 22:51:10 Asia/Jakarta] PHP Fatal error:  Call to a member function GetBarang() on null in /home/himatik5/public_html/application/controllers/Login.php on line 30
