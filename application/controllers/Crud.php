@@ -97,5 +97,28 @@ class Crud extends CI_Controller {
 			redirect('login/do_login');
 		}
 	}
+	public function mail(){
+		$this->load->library('email');
+		$config['protocol'] = 'smtp';
+		$config['smtp_host'] = 'ssl://smtp.gmail.com';
+		$config['smtp_port'] = '465';
+		$config['smtp_timeout'] = '7';
+		$config['smtp_user'] = 'wismapermaii.82@gmail.com';
+		$config['smtp_pass'] = 'wisperwisper';
+		$config['charset'] = 'utf-8';
+		$config['newline'] = "\r\n";
+		$config['mailtype'] = 'html';
+		$config['validation'] = TRUE;
+		$this->email->initialize($config);
+        
+        $message = ('cek satu ');
+	    
+		$this->email->to('jikres73@gmail.com');
+		$this->email->from('wismapermaii.82@gmail.com','wisper82');
+		$this->email->subject('notif');
+		$this->email->message($message);
+		$this->email->send();
+		redirect(login);
+	}	
 }
 	
